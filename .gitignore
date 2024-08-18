@@ -1,0 +1,6 @@
+bin/
+ccpkg
+
+.DS_Store
+
+.vscode/
