@@ -9,6 +9,8 @@
     \/___/   \/___/   \/_/    \/_/\/_/ \/___/ 
 <br>
 A shitty Go cross-compile tool written in Go
+<br>
+<img alt="GitHub License" src="https://img.shields.io/github/license/ItzAfroBoy/ccpkg"> <img src="https://www.codefactor.io/repository/github/itzafroboy/ccpkg/badge" alt="CodeFactor" /> <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/ItzAfroBoy/ccpkg">
 </pre>
 </div>
 
