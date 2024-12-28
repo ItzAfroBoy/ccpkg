@@ -18,14 +18,13 @@ func main() {
 		projectName = path.Base(strings.Split(string(raw), "\n")[0])
 	}
 	for _, v := range platforms {
-		var output string
+		var suffix string
 		split := strings.Split(v, "/")
 		_os, arch := fmt.Sprintf("GOOS=%s", split[0]), fmt.Sprintf("GOARCH=%s", split[1])
 		if split[0] == "windows" {
-			output = fmt.Sprintf("bin/%s-%s-%s.exe", projectName, split[0], split[1])
-		} else {
-			output = fmt.Sprintf("bin/%s-%s-%s", projectName, split[0], split[1])
+			suffix = ".exe"
 		}
+		output := fmt.Sprintf("bin/%s-%s-%s%s", projectName, split[0], split[1], suffix)
 		cmd := exec.Command("go", "build", "-o", output)
 		cmd.Env = append(cmd.Environ(), _os, arch)
 		if err := cmd.Run(); err != nil {
